@@ -5,8 +5,8 @@ Version:	0.92c
 Release:	0.1
 License:	GPL
 Group:		Applications/Communications
+Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	5475b7f07a594657a6983962a14efdda
-Source0:	http://telia.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-no-gtk1.patch
 URL:		http://gtk-gnutella.sourceforge.net/
 BuildRequires:	gtk+2-devel
