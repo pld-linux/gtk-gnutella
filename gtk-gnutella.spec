@@ -3,7 +3,7 @@ Summary(es):	Cliente de la red P2P Gnutella
 Summary(pl):	Klient sieci Gnutella
 Name:		gtk-gnutella
 Version:	0.94
-Release:	1
+Release:	1.1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
@@ -14,6 +14,7 @@ BuildRequires:	gtk+2-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	zlib-devel
 BuildRequires:	bison
+BuildRequires:	glib2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,9 +31,13 @@ Klient sieci Gnutella.
 
 %build
 ./Configure -Dprefix=%{_prefix} -Dbindir=%{_bindir} \
-	-Dprivlib=%{_datadir}/%{name} \
-	-Dsysman=%{_mandir}/man1 -Dccflags="-Wall" -Dcc=%{__cc} \
-	-Doptimize="%{rpmcflags}" -Dyacc="bison -y" -Dgtkversion=2  \
+	-Dprivlib=%{_datadir}/%{name} -Dsysman=%{_mandir}/man1 \
+%ifarch amd64
+	-Dccflags="-Wall -I/usr/include/glib-2.0 -I/usr/lib64/glib/include" \
+%else
+	-Dccflags="-Wall -I/usr/include/glib-2.0 -I/usr/lib/glib/include" \
+%endif
+	 -Dcc=%{__cc} -Doptimize="%{rpmcflags}" -Dyacc="bison -y" -Dgtkversion=2  \
 	-Dofficial=true -ders
 
 %{__make}
