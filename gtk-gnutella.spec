@@ -9,7 +9,11 @@ Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz
 # Source0-md5:	5475b7f07a594657a6983962a14efdda
 Patch0:		%{name}-gtk2.patch
 URL:		http://gtk-gnutella.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gtk+2-devel
+BuildRequires:	libtool
 BuildRequires:	libxml2-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
