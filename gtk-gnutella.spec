@@ -1,11 +1,11 @@
 Summary:	Gnutella P2P Network Client
 Summary(pl):	Klient sieci Gnutella
 Name:		gtk-gnutella
-Version:	0.90
+Version:	0.91
 Release:	1
 License:	GPL
 Group:		Applications/Communications
-Source0:	http://telia.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
+Source0:	http://telia.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
 URL:		http://gtk-gnutella.sourceforge.net
 BuildRequires:	gtk+-devel
 BuildRequires:	libxml2-devel
