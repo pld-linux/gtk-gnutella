@@ -1,17 +1,17 @@
 Summary:	Gnutella P2P Network Client
 Summary(pl):	Klient sieci Gnutella
 Name:		gtk-gnutella
-Version:	0.91.1
+Version:	0.91.9
 Release:	1
 License:	GPL
 Group:		Applications/Communications
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/%{name}/%{name}-%{version}.tar.gz
-URL:		http://gtk-gnutella.sourceforge.net
-BuildRequires:	gtk+-devel
+Source0:	http://telia.dl.sourceforge.net/sourceforge/%{name}/%{name}-GTK2-%{version}.tar.gz
+Patch0:		%{name}-no-gtk1.patch
+URL:		http://gtk-gnutella.sourceforge.net/
+BuildRequires:	gtk+2-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Gnutella P2P Network Client.
@@ -20,7 +20,8 @@ Gnutella P2P Network Client.
 Klient sieci Gnutella.
 
 %prep
-%setup -q
+%setup -q -n %{name}-GTK2-%{version}
+%patch0 -p1
 
 %build
 rm -f missing
@@ -28,7 +29,7 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure --enable-gtk2
 %{__make}
 
 %install
