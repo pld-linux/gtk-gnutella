@@ -5,7 +5,7 @@ Version:	0.91.1
 Release:	1
 License:	GPL
 Group:		Applications/Communications
-Source0:	http://telia.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/%{name}/%{name}-%{version}.tar.gz
 URL:		http://gtk-gnutella.sourceforge.net
 BuildRequires:	gtk+-devel
 BuildRequires:	libxml2-devel
