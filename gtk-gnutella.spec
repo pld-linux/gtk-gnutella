@@ -1,12 +1,13 @@
 Summary:	Gnutella P2P Network Client
 Summary(pl):	Klient sieci Gnutella
 Name:		gtk-gnutella
-Version:	0.92c
+Version:	0.92.1c
 Release:	1
 License:	GPL
 Group:		Applications/Communications
-Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	5475b7f07a594657a6983962a14efdda
+Source0:	http://cesnet.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
+# Source0-md5:	d20ef03a5474aa0d961c52030caf206b
+#Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-gtk2.patch
 URL:		http://gtk-gnutella.sourceforge.net/
 BuildRequires:	autoconf
@@ -26,16 +27,17 @@ Klient sieci Gnutella.
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
 
 %build
 rm -f missing
 %{__gettextize}
+mv configure.in~ configure.in
 %{__libtoolize}
 %{__aclocal}
 %{__automake}
 %{__autoconf}
-%configure
+%configure --enable-gtk2
 %{__make}
 
 %install
