@@ -24,7 +24,12 @@ Klient sieci Gnutella.
 %setup -q
 
 %build
-%configure2_13
+rm -f missing
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
+%configure
 %{__make}
 
 %install
