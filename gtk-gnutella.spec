@@ -12,7 +12,6 @@ BuildRequires:	libxml2-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _prefix         /usr/X11R6
 
 %description
 Gnutella P2P Network Client.
