@@ -1,0 +1,22 @@
+--- gtk-gnutella-0.95.org/gtk-gnutella.desktop	2005-06-15 11:03:11.903554320 +0200
++++ gtk-gnutella-0.95/gtk-gnutella.desktop	2005-06-15 11:09:08.910281048 +0200
+@@ -6,16 +6,19 @@
+ Name[hu]=Gtk-Gnutella
+ Name[ja]=Gtk-Gnutella
+ Name[nl]=Gtk-Gnutella
++Name[pl]=Gtk-Gnutella
+ Comment=A GUI based Gnutella Servent
+ Comment[fr]=Un servent Gnutella graphique
+ Comment[hu]=Grafikus Gnutella-kiszolgáló
+ Comment[ja]=GUI ベースの Gnutella サーバントです
+ Comment[nl]=Een grafische Gnutella servent
++Comment[pl]=Klient sieci Gnutella
+ GenericName=P2P Client
+ GenericName[fr]=Client P2P
+ GenericName[hu]=P2P Kliens
+ GenericName[ja]=P2P クライアント
+ GenericName[nl]=P2P programma
++GenericName[pl]=Klient P2P
+ TryExec=gtk-gnutella
+ Exec=gtk-gnutella
+ StartupNotify=false
