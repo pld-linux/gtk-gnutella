@@ -3,12 +3,14 @@ Summary(es):	Cliente de la red P2P Gnutella
 Summary(pl):	Klient sieci Gnutella
 Name:		gtk-gnutella
 Version:	0.95
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/gtk-gnutella/%{name}-%{version}.tar.bz2
 # Source0-md5:	de2ff4973c975ee16cdd69ca72c06bcd
 URL:		http://gtk-gnutella.sourceforge.net/
+Patch0:		%{name}-gtk2.6.patch
+Patch1:		%{name}-desktop.patch
 BuildRequires:	bison
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel
@@ -28,6 +30,8 @@ Klient sieci Gnutella.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
 
 %build
 ./Configure \
@@ -52,6 +56,9 @@ rm -rf $RPM_BUILD_ROOT
 	INSTALL_PREFIX=$RPM_BUILD_ROOT
 %{__make} install.man \
 	INSTALL_PREFIX=$RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
+install %{name}.desktop $RPM_BUILD_ROOT%{_desktopdir}
+install %{name}*.png $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %find_lang %{name} --with-gnome
 
@@ -64,3 +71,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_mandir}/man1/*
+%{_desktopdir}/%{name}.desktop
+%{_pixmapsdir}/%{name}*.png
