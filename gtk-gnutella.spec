@@ -7,7 +7,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/gtk-gnutella/%{name}-%{version}.tar.bz2
-# Source0-md5:	de2ff4973c975ee16cdd69ca72c06bcd
+# Source0-md5:	6529379cc105c1e98f501a67e8e875fd
 URL:		http://gtk-gnutella.sourceforge.net/
 Patch0:		%{name}-desktop.patch
 BuildRequires:	bison
