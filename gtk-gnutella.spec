@@ -1,6 +1,6 @@
 Summary:	Gnutella P2P Network Client
-Summary(es):	Cliente de la red P2P Gnutella
-Summary(pl):	Klient sieci Gnutella
+Summary(es.UTF-8):   Cliente de la red P2P Gnutella
+Summary(pl.UTF-8):   Klient sieci Gnutella
 Name:		gtk-gnutella
 Version:	0.96.1
 Release:	1
@@ -21,10 +21,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Gnutella P2P Network Client.
 
-%description -l es
+%description -l es.UTF-8
 Cliente de la red P2P Gnutella.
 
-%description -l pl
+%description -l pl.UTF-8
 Klient sieci Gnutella.
 
 %prep
