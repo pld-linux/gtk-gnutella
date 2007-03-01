@@ -1,0 +1,21 @@
+diff -ur gtk-gnutella-0.96.3.orig/Configure gtk-gnutella-0.96.3/Configure
+--- gtk-gnutella-0.96.3.orig/Configure	2006-11-10 00:01:15.000000000 +0100
++++ gtk-gnutella-0.96.3/Configure	2007-03-01 16:34:03.000000000 +0100
+@@ -585,7 +585,7 @@
+ loclibpth="$loclibpth /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib"
+ 
+ : general looking path for locating libraries
+-glibpth="/lib /usr/lib $xlibpth"
++glibpth="/lib /lib64 /usr/lib /usr/lib64 $xlibpth"
+ glibpth="$glibpth /usr/ccs/lib /usr/ucblib /usr/local/lib"
+ test -f /usr/shlib/libc.so && glibpth="/usr/shlib $glibpth"
+ test -f /shlib/libc.so     && glibpth="/shlib $glibpth"
+@@ -1543,7 +1543,7 @@
+ xgettext
+ "
+ pth=`echo $PATH | sed -e "s/$p_/ /g"`
+-pth="$pth /lib /usr/lib"
++pth="$pth /lib /usr/lib /lib64 /usr/lib64"
+ for file in $loclist; do
+ 	eval xxx=\$$file
+ 	case "$xxx" in
