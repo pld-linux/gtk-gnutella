@@ -2,12 +2,12 @@ Summary:	Gnutella P2P Network Client
 Summary(es.UTF-8):	Cliente de la red P2P Gnutella
 Summary(pl.UTF-8):	Klient sieci Gnutella
 Name:		gtk-gnutella
-Version:	0.96.1
+Version:	0.96.3
 Release:	1
-License:	GPL
+License:	GPL v2+
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/gtk-gnutella/%{name}-%{version}.tar.bz2
-# Source0-md5:	6529379cc105c1e98f501a67e8e875fd
+# Source0-md5:	c6952037a10ea6d5ac5649e7b75f9d15
 URL:		http://gtk-gnutella.sourceforge.net/
 Patch0:		%{name}-desktop.patch
 BuildRequires:	bison
