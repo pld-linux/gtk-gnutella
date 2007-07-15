@@ -1,9 +1,9 @@
---- gtk-gnutella-0.96.3/extra_files/gtk-gnutella.desktop	2006-11-10 00:01:22.000000000 +0100
-+++ gtk-gnutella-0.96.3/extra_files/gtk-gnutella.desktop	2007-03-01 13:40:53.000000000 +0100
+--- gtk-gnutella-0.96.4/extra_files/gtk-gnutella.desktop~	2007-07-07 06:21:17.000000000 +0200
++++ gtk-gnutella-0.96.4/extra_files/gtk-gnutella.desktop	2007-07-15 19:27:47.000000000 +0200
 @@ -9,6 +9,7 @@
- Name[nb]=Gtk-Gnutella
- Name[nl]=Gtk-Gnutella
- Name[nn]=Gtk-Gnutella
+ Name[nb]=gtk-gnutella
+ Name[nl]=gtk-gnutella
+ Name[nn]=gtk-gnutella
 +Name[pl]=Gtk-Gnutella
  Comment=A GUI based Gnutella Servent
  Comment[de]=Ein grafischer Gnutella-Servent
@@ -16,11 +16,17 @@
  GenericName=P2P Client
  GenericName[de]=P2P-Client
  GenericName[fr]=Client P2P
-@@ -25,6 +27,7 @@
+@@ -25,6 +27,8 @@
  GenericName[nb]=Fildelingsprogram
  GenericName[nl]=P2P programma
  GenericName[nn]=Fildelingsprogram
++GenericName[fr]=Client P2P
 +GenericName[pl]=Klient P2P
  TryExec=gtk-gnutella
  Exec=gtk-gnutella
  StartupNotify=false
+@@ -32,3 +36,4 @@
+ Type=Application
+ Categories=GTK;Application;Network;FileTransfer;P2P;
+ Icon=gtk-gnutella.png
++# vi: encoding=utf-8
