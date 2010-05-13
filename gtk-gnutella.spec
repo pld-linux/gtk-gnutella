@@ -13,8 +13,10 @@ URL:		http://gtk-gnutella.sourceforge.net/
 BuildRequires:	bison
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel
+BuildRequires:	groff
 BuildRequires:	gtk+2-devel
 BuildRequires:	libxml2-devel
+BuildRequires:	pkgconfig
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
