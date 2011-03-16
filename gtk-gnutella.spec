@@ -2,12 +2,12 @@ Summary:	Gnutella P2P Network Client
 Summary(es.UTF-8):	Cliente de la red P2P Gnutella
 Summary(pl.UTF-8):	Klient sieci Gnutella
 Name:		gtk-gnutella
-Version:	0.96.8
+Version:	0.96.9
 Release:	1
 License:	GPL v2+
 Group:		Applications/Communications
 Source0:	http://downloads.sourceforge.net/gtk-gnutella/%{name}-%{version}.tar.bz2
-# Source0-md5:	a9424951fec62cc9f19f2086dc5137b5
+# Source0-md5:	77e1a66685f563c668d4bbf69e4db0bb
 Patch0:		%{name}-desktop.patch
 URL:		http://gtk-gnutella.sourceforge.net/
 BuildRequires:	bison
@@ -51,12 +51,13 @@ Klient sieci Gnutella.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	INSTALL_PREFIX=$RPM_BUILD_ROOT
 %{__make} install.man \
 	INSTALL_PREFIX=$RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
+
 install extra_files/%{name}.desktop $RPM_BUILD_ROOT%{_desktopdir}
 install extra_files/%{name}*.png $RPM_BUILD_ROOT%{_pixmapsdir}
 
@@ -70,6 +71,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc README ChangeLog AUTHORS
 %attr(755,root,root) %{_bindir}/gtk-gnutella
 %{_datadir}/%{name}
-%{_mandir}/man1/gtk-gnutella.*
+%{_mandir}/man1/gtk-gnutella.1*
 %{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/%{name}*.png
