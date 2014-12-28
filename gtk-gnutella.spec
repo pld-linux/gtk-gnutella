@@ -11,7 +11,7 @@ Source0:	http://downloads.sourceforge.net/gtk-gnutella/%{name}-%{version}.tar.bz
 Patch0:		%{name}-desktop.patch
 URL:		http://gtk-gnutella.sourceforge.net/
 BuildRequires:	bison
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel
 BuildRequires:	groff
 BuildRequires:	gtk+2-devel
